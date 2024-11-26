@@ -106,21 +106,21 @@ int4k& int4k::operator-=(const int4k& rhs) {
 	return *this;
 }
 
-int4k int4k::operator+(const int4k& rhs) {
+int4k int4k::operator+(const int4k& rhs) const {
 	// Return *this + rhs (make copy of *this, then use +=)
 	int4k sum(*this);
 	sum += rhs;
 	return sum;
 }
 
-int4k int4k::operator-(const int4k& rhs) {
+int4k int4k::operator-(const int4k& rhs) const {
 	// Return *this - rhs (make copy of *this, then use -=)
 	int4k diff(*this);
 	diff -= rhs;
 	return diff;
 }
 
-int4k int4k::operator*(const int4k& rhs) {
+int4k int4k::operator*(const int4k& rhs) const {
 	// Return *this * rhs by performing a series of digit-shifts and partial
 	//	products
 	int4k product; // Running project

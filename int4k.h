@@ -18,10 +18,10 @@ public:
 	int4k& operator+=(const int4k& rhs);
 	int4k& operator-=(const int4k& rhs);
 
-	int4k operator+(const int4k& rhs);
-	int4k operator-(const int4k& rhs);
+	int4k operator+(const int4k& rhs) const;
+	int4k operator-(const int4k& rhs) const;
 
-	int4k operator*(const int4k& rhs);
+	int4k operator*(const int4k& rhs) const;
 	int4k& operator*=(const int4k& rhs) { *this = *this * rhs; return *this; }
 
 	int4k& operator++() { *this += 1; return *this; }
