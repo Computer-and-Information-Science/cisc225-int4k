@@ -8,7 +8,7 @@
 class int4k {
 	friend std::istream& operator>>(std::istream& lhs, int4k& rhs);
 protected:
-	char digits[4096];
+	char digits[4096]; // Digits, stored as ten's complement
 	int4k& abs() { return is_negative() ? neg() : *this; }
 	int compare(const int4k& rhs) const;
 	std::pair<int4k, int4k> divide_by(const int4k& divisor) const;
